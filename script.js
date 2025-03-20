@@ -2461,9 +2461,8 @@ const areaCodes = [
     location: 'N/A'
   }
 ];
-    // Continue adding more codes as 
 // Function to flip the card
-function flipCard() {
+function flipCard(event) {
     const card = event.currentTarget; // Get the clicked card
     card.classList.toggle('flipped'); // Toggle the 'flipped' class to flip the card
 }
@@ -2494,7 +2493,7 @@ function createCards() {
         container.appendChild(card);
         
         // Add flip functionality to each card
-        card.onclick = flipCard;
+        card.addEventListener("click", flipCard);
     });
 }
 
